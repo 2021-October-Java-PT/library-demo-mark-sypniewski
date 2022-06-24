@@ -1,0 +1,35 @@
+package org.wecancodeit.librarydemo;
+
+
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+
+@Entity
+public class Book {
+
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String description;
+    @ManyToOne
+    private Campus campus;
+    @ManyToMany
+    private Collection<Author> authors;
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public Book(){}
+
+    public Book(String title, String description, Campus testCampus, Author ...authors) {
+        this.title=title;
+        this.description=description;
+        this.campus=testCampus;
+        this.authors=new ArrayList<>(Arrays.asList(authors));
+
+    }
+}
