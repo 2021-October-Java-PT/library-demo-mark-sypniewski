@@ -21,16 +21,20 @@ public class Campus {
         return id;
     }
 
+    public Collection<Book> getBooks() {
+        return books;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
     public Campus(){}
 
 
     public Campus(String location) {
         this.location = location;
 
-    }
-
-    public Collection<Book> getBooks() {
-        return books;
     }
 
     @Override

@@ -23,6 +23,14 @@ public class Author {
         return id;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
     public Collection<Book> getBooks(){
         return books;
     }
